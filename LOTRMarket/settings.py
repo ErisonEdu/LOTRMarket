@@ -77,9 +77,9 @@ WSGI_APPLICATION = 'LOTRMarket.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'lotrmarket',
+        'NAME': 'lotr_market_db',
         'USER': 'postgres',
-        'PASSWORD': 'protectArda123',
+        'PASSWORD': '123456',
         'HOST': 'localhost',
         'PORT': '5432',
     }
