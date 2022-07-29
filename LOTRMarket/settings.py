@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # local apps
+    'LOTRMarket.humans_market',
+    # 3th-party apps
     'rest_framework',
 ]
 

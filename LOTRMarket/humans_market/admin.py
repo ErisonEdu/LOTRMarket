@@ -1,3 +1,4 @@
 from django.contrib import admin
+from LOTRMarket.humans_market.models import HumanItem
 
-# Register your models here.
+admin.site.register(HumanItem)
