@@ -1,12 +1,13 @@
 services:
   postgres-compose:
+    restart: always
     image: postgres
     environment:
       POSTGRES_PASSWORD: "123456"
     ports:
       - "5432:5432"
     volumes:
-      - /Users/erison/Desktop/django/LOTRMarket
+      - ./db-data:/var/lib/postgresql/data
     networks:
       - postgres-compose-network
       
