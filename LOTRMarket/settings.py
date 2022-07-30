@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     # local apps
     'LOTRMarket.humans_market',
     'LOTRMarket.elves_market',
+    'LOTRMarket.dwarves_market',
     # 3th-party apps
     'rest_framework',
 ]
