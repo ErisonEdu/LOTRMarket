@@ -1,3 +1,4 @@
 from django.contrib import admin
+from LOTRMarket.elves_market.models import ElvenItem
 
-# Register your models here.
+admin.site.register(ElvenItem)
