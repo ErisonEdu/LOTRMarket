@@ -1,6 +1,8 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from rest_framework import viewsets, permissions
+from LOTRMarket.elves_market.models import ElvenItem
+from .serializers import ElvenItemSerializer
 
-# Create your views here.
-def elven_market_view(request):
-        return HttpResponse('<h1>Elven Market</h1>')
+class ElvenItemAPIViewSet(viewsets.ModelViewSet):
+    queryset = ElvenItem.objects.all()
+    serializer_class = ElvenItemSerializer
+    permission_classes = [permissions.IsAuthenticated]

@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import elven_market_view
+from .views import ElvenItemAPIViewSet
 
 urlpatterns = [
-    path("elven_market/", elven_market_view, name="home"),
+    path("elven_market/", ElvenItemAPIViewSet.as_view, name="elvenItems"),
 ]
