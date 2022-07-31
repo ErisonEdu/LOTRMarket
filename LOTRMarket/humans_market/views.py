@@ -1,6 +1,8 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from rest_framework import viewsets, permissions
+from LOTRMarket.humans_market.models import HumanItem
+from .serializers import HumanItemSerializer
 
-# Create your views here.
-def humans_market_view(request):
-        return HttpResponse('<h1>Humans Market</h1>')
+class HumanItemAPIViewSet(viewsets.ModelViewSet):
+        queryset = HumanItem.objects.all()
+        serializer_class = HumanItemSerializer
+        permission_classes = [permissions.IsAuthenticated]

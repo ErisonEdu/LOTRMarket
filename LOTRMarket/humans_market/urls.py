@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import humans_market_view
+from .views import HumanItemAPIViewSet
 
 urlpatterns = [
-    path("human_market/", humans_market_view, name="home"),
+    path("human_market/", HumanItemAPIViewSet.as_view, name="humanItems"),
 ]
