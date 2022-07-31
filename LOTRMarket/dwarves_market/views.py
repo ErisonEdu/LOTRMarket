@@ -1,4 +1,9 @@
-from django.http import HttpResponse
+from itertools import permutations
+from rest_framework import viewsets, permissions
+from LOTRMarket.dwarves_market.models import DwarvenItem
+from .serializers import DwarvenItemSerializer
 
-def dwarven_market_view(request):
-        return HttpResponse('<h1>Dwarven Market</h1>')
+class DwarvenItemAPIViewSet(viewsets.ModelViewSet):
+        queryset = DwarvenItem.objects.all()
+        serializer_class = DwarvenItemSerializer
+        permission_classes = [permissions.IsAuthenticated]

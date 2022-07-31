@@ -5,10 +5,12 @@ from rest_framework import routers
 
 from LOTRMarket.humans_market.views import HumanItemAPIViewSet
 from LOTRMarket.elves_market.views import ElvenItemAPIViewSet
+from LOTRMarket.dwarves_market.views import DwarvenItemAPIViewSet
 
 router = routers.DefaultRouter()
 router.register(r"human_market", HumanItemAPIViewSet),
-router.register(r"elven_market", ElvenItemAPIViewSet)
+router.register(r"elven_market", ElvenItemAPIViewSet),
+router.register(r'dwarven_market', DwarvenItemAPIViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
