@@ -4,11 +4,15 @@ from django.urls import path, include
 from rest_framework import routers
 
 from LOTRMarket.humans_market.views import HumanItemAPIViewSet
+from LOTRMarket.humans_market.views import HumanWeaponAPIViewSet
+
 from LOTRMarket.elves_market.views import ElvenItemAPIViewSet
+
 from LOTRMarket.dwarves_market.views import DwarvenItemAPIViewSet
 
 router = routers.DefaultRouter()
 router.register(r"human_market", HumanItemAPIViewSet),
+router.register(r'human_weapon', HumanWeaponAPIViewSet)
 router.register(r"elven_market", ElvenItemAPIViewSet),
 router.register(r'dwarven_market', DwarvenItemAPIViewSet)
 

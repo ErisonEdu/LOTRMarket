@@ -17,4 +17,4 @@ class HumanWeapon(models.Model):
     value = models.IntegerField()
 
     def __str__(self):
-        return self.description
+        return self.name
